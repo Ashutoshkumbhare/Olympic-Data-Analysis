@@ -135,26 +135,26 @@ if user_menu == 'Athlete wise Analysis':
     st.title('Distribution Of Age')
     st.plotly_chart(fig)
 
-    # Distribution of Age wrt Sports(Gold Medalist)
-    x = []
-    name = []
-    famous_sports = ['Basketball', 'Judo', 'Football', 'Tug-Of-War', 'Athletics',
-                     'Swimming', 'Badminton', 'Sailing', 'Gymnastics',
-                     'Art Competitions', 'Handball', 'Weightlifting', 'Wrestling',
-                     'Water Polo', 'Hockey', 'Rowing', 'Fencing',
-                     'Shooting', 'Boxing', 'Taekwondo', 'Cycling', 'Diving', 'Canoeing',
-                     'Tennis', 'Golf', 'Softball', 'Archery',
-                     'Volleyball', 'Synchronized Swimming', 'Table Tennis', 'Baseball',
-                     'Rhythmic Gymnastics', 'Rugby Sevens',
-                     'Beach Volleyball', 'Triathlon', 'Rugby', 'Polo', 'Ice Hockey']
-    for sport in famous_sports:
-        temp_df = athlete_data[athlete_data['Sport'] == sport]
-        x.append(temp_df[temp_df['Medal'] == 'Gold']['Age'].dropna())
-        name.append(sport)
-    fig = ff.create_distplot(x, name, show_hist=False, show_rug=False)
-    fig.update_layout(autosize=False, width=1000, height=600)
-    st.title("Distribution of Age wrt Sports(Gold Medalist)")
-    st.plotly_chart(fig)
+    # # Distribution of Age wrt Sports(Gold Medalist)
+    # x = []
+    # name = []
+    # famous_sports = ['Basketball', 'Judo', 'Football', 'Tug-Of-War', 'Athletics',
+    #                  'Swimming', 'Badminton', 'Sailing', 'Gymnastics',
+    #                  'Art Competitions', 'Handball', 'Weightlifting', 'Wrestling',
+    #                  'Water Polo', 'Hockey', 'Rowing', 'Fencing',
+    #                  'Shooting', 'Boxing', 'Taekwondo', 'Cycling', 'Diving', 'Canoeing',
+    #                  'Tennis', 'Golf', 'Softball', 'Archery',
+    #                  'Volleyball', 'Synchronized Swimming', 'Table Tennis', 'Baseball',
+    #                  'Rhythmic Gymnastics', 'Rugby Sevens',
+    #                  'Beach Volleyball', 'Triathlon', 'Rugby', 'Polo', 'Ice Hockey']
+    # for sport in famous_sports:
+    #     temp_df = athlete_data[athlete_data['Sport'] == sport]
+    #     x.append(temp_df[temp_df['Medal'] == 'Gold']['Age'].dropna())
+    #     name.append(sport)
+    # fig = ff.create_distplot(x, name, show_hist=False, show_rug=False)
+    # fig.update_layout(autosize=False, width=1000, height=600)
+    # st.title("Distribution of Age wrt Sports(Gold Medalist)")
+    # st.plotly_chart(fig)
 
     # Height Vs Weight
     st.title('Height Vs Weight')
