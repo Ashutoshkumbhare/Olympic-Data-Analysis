@@ -24,7 +24,6 @@ else:
     data = summer_df
 # Code of Medal Tally
 if user_menu == 'Medal Tally':
-    st.header("Medal Tally")
     Years, Country = preprocessor.country_year_list(data)
     st.sidebar.header("Medal Tally")
     selected_year = st.sidebar.selectbox("Select Year",Years)
